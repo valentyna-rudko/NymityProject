@@ -1,0 +1,57 @@
+﻿<html data-ng-app="myApp">
+@{
+    ViewBag.Title = "Products";
+}
+
+<body data-ng-controller="MasterDetailCtrl">
+    <div class="container">
+        <h2>Categories</h2>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Category ID</th>
+                        <th>Category Name</th>
+                        <th>Description</th>
+                        
+                    </tr>
+                </thead>
+                <tbody data-ng-repeat="x in categories" >
+                    <tr ng-click="selectCategory(x);">
+                        <td>{{ x.CategoryID }}</td>
+                        <td>{{ x.CategoryName }}</td>
+                        <td>{{ x.Description }}</td>                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container" ng-show="showDetail">
+        <h2>Products</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity Per Unit</th>
+                        <th>Unit Price</th>
+                        <th>Units In Stock</th>
+                    </tr>
+                </thead>
+                <tbody  data-ng-repeat="y in products track by $index">
+                    <tr>
+                        <td>{{ y.ProductID }}</td>
+                        <td>{{ y.ProductName }}</td>
+                        <td>{{ y.QuantityPerUnit }}</td>
+                        <td>{{ y.UnitPrice }}</td>
+                        <td>{{ y.UnitsInStock }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+    </div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="~/Scripts/MyAngular/controller.js"></script>
