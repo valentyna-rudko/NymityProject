@@ -1,8 +1,11 @@
 # NymityProject
+
 Technical Assessment
+
 Create a web application to demonstrate hands-on experience with the following requirements and technologies:
 
 Requirements: 
+
 One public page
 One login
 One secured page (should not be accessible for unauthenticated users)
