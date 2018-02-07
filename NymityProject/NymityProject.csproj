@@ -243,6 +243,10 @@
     <Content Include="App_Data\northwnd_log.ldf">
       <DependentUpon>NORTHWND.MDF</DependentUpon>
     </Content>
+    <Content Include="App_Data\WebFormsIdentity.mdf" />
+    <Content Include="App_Data\WebFormsIdentity_log.ldf">
+      <DependentUpon>WebFormsIdentity.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
